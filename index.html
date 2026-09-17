@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arunika — Flashcard AR &amp; Dongeng</title>
+  <meta name="description" content="Belajar jadi hidup dengan Digital Flashcard AR dari Arunika. Lihat dunia 3D muncul, dan nikmati dongeng gratis di aplikasi." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">arunika</div>
+      <a href="#cta" class="btn btn-primary">Dapatkan Aplikasi</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">Digital Flashcard AR untuk si kecil</span>
+          <h1>Belajar Jadi <span class="accent">Hidup</span><br />dengan Digital Flashcard AR</h1>
+          <p class="lede">
+            Lihat dunia 3D muncul langsung di depan anak.
+            Belajar jadi menyenangkan, interaktif, dan penuh cerita.
+          </p>
+          <div class="hero-actions">
+            <a href="#cta" class="btn btn-primary btn-lg">Mulai Sekarang</a>
+            <a href="#products" class="btn btn-ghost btn-lg">Lihat Paket</a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="flashcard-stack">
+            <div class="flashcard flashcard-back">
+              <img src="assets/back.png" alt="Bagian belakang Flashcard AR Arunika" />
+            </div>
+            <div class="flashcard flashcard-front">
+              <img src="assets/flashcard-preview.png" alt="Contoh Flashcard AR Arunika" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- APP PREVIEW -->
+    <section class="section">
+      <div class="container app-preview-grid">
+        <div class="app-preview-copy">
+          <h2>Satu Aplikasi untuk<br /><span class="accent">Scan &amp; Dongeng</span></h2>
+          <p class="lede">
+            Gunakan aplikasi Arunika untuk
+            melihat objek AR dan memutar dongeng kapan saja.
+          </p>
+          <ul class="checklist">
+            <li>Objek AR 3D interaktif</li>
+            <li>Koleksi dongeng</li>
+          </ul>
+        </div>
+        <div class="app-preview-visual">
+          <div class="phone-frame phone-frame-lg">
+            <img src="assets/phone-release.png" alt="Aplikasi Arunika menampilkan koleksi kartu" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="section">
+      <div class="container">
+        <div class="features">
+          <div class="feature-card">
+            <div class="feature-icon">✨</div>
+            <h3>Digital Flashcard AR</h3>
+            <p>Lihat objek 3D muncul dengan animasi.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🌙</div>
+            <h3>Dongeng</h3>
+            <p>Audio dongeng untuk menemani anak dan meningkatkan imajinasi.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MEMBERSHIP & BUNDLES (live product showcase) -->
+    <section class="section" id="products">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Pilihan <span class="accent">Paket</span></h2>
+          <p class="lede">Membership dan bundling yang tersedia di aplikasi Arunika saat ini.</p>
+        </div>
+
+        <div id="product-carousel" class="product-carousel" hidden>
+          <div id="product-grid" class="product-grid"></div>
+        </div>
+        <div id="product-dots" class="product-dots" hidden></div>
+        <div id="product-loading" class="product-status">Memuat paket…</div>
+        <div id="product-fallback" class="product-status" hidden>
+          Paket tersedia di aplikasi — buka aplikasi untuk melihat pilihan lengkap.
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section final-cta" id="cta">
+      <div class="container">
+        <h2>Siap Mulai Petualangan Belajar?</h2>
+        <p class="lede">Dapatkan Aplikasi Arunika</p>
+
+        <div class="store-badges">
+          <img src="assets/playstore.png" alt="Segera di Play Store" height="48" />
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      © 2026 Arunika — Belajar dengan Cerita &amp; Teknologi
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
