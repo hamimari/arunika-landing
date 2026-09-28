@@ -542,6 +542,125 @@ img {
   font-size: 14px;
 }
 
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: var(--text-muted);
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: var(--orange-dark);
+  text-decoration: underline;
+}
+
+/* ---------- Legal pages (Privacy Policy, Account Deletion) ---------- */
+.legal-header {
+  padding: 48px 0 8px;
+}
+
+.legal-header .back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--orange-dark);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.legal-header h1 {
+  font-size: 32px;
+  margin: 0 0 8px;
+  letter-spacing: -0.02em;
+}
+
+.legal-updated {
+  color: var(--text-muted);
+  font-size: 14px;
+  margin: 0 0 32px;
+}
+
+.legal-container {
+  max-width: 760px;
+}
+
+.legal-card {
+  background: var(--card);
+  border-radius: var(--radius-md);
+  padding: 28px 32px;
+  box-shadow: var(--shadow-soft);
+  margin-bottom: 20px;
+}
+
+.legal-card h2 {
+  font-size: 18px;
+  margin: 0 0 10px;
+}
+
+.legal-card p,
+.legal-card li {
+  color: var(--text-muted);
+  font-size: 15px;
+}
+
+.legal-card ul {
+  margin: 8px 0 0;
+  padding-left: 20px;
+}
+
+.legal-card a {
+  color: var(--orange-dark);
+}
+
+.legal-callout {
+  background: var(--orange-soft);
+  border-radius: var(--radius-md);
+  padding: 20px 24px;
+  font-size: 14.5px;
+  color: var(--text-dark);
+  margin-bottom: 20px;
+}
+
+.legal-form label {
+  display: block;
+  font-weight: 600;
+  font-size: 14px;
+  margin: 14px 0 6px;
+}
+
+.legal-form input,
+.legal-form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--border-soft);
+  border-radius: 12px;
+  font-family: inherit;
+  font-size: 14.5px;
+  color: var(--text-dark);
+  background: var(--bg);
+}
+
+.legal-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.legal-form-status {
+  margin-top: 14px;
+  font-size: 14px;
+}
+
+.legal-form-status.is-success { color: var(--green); }
+.legal-form-status.is-error { color: #DC2626; }
+
 /* ---------- Responsive ---------- */
 @media (max-width: 860px) {
   .hero-grid,
