@@ -1,1 +1,4 @@
 .DS_Store
+
+# Pre-release gate output
+prerelease-reports/
