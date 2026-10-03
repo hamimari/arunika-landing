@@ -1,7 +1,8 @@
-// Set this to the deployed backend's base URL before publishing the site.
-// The local value below is for development against a locally running
-// arunika-backend only.
-const API_BASE_URL = 'http://localhost:8080';
+// The production API, or a locally running arunika-backend when the site
+// itself is served from this machine (development, prerelease_check.sh).
+const API_BASE_URL = ['localhost', '127.0.0.1'].includes(window.location.hostname)
+  ? 'http://localhost:8080'
+  : 'https://api.haloarunika.com';
 
 const TYPE_LABELS = {
   subscription: 'Langganan',
