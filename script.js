@@ -206,4 +206,20 @@ async function loadProducts() {
   }
 }
 
-document.addEventListener('DOMContentLoaded', loadProducts);
+// Touch devices have no real hover, so tapping the hero flashcards toggles
+// them open/closed; tapping anywhere else closes them.
+function initFlashcardStack() {
+  const stack = document.querySelector('.flashcard-stack');
+  if (!stack || window.matchMedia('(hover: hover)').matches) return;
+
+  stack.addEventListener('click', (e) => {
+    e.stopPropagation();
+    stack.classList.toggle('is-open');
+  });
+  document.addEventListener('click', () => stack.classList.remove('is-open'));
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  initFlashcardStack();
+  loadProducts();
+});

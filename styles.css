@@ -208,11 +208,24 @@ img {
   transform: rotate(-6deg);
 }
 
-.flashcard-stack:hover .flashcard-back {
+/* Hover only on devices that truly hover; touch devices toggle .is-open on
+   tap instead (see script.js), since a tapped :hover sticks until the user
+   taps elsewhere and the stack could never be closed. */
+@media (hover: hover) {
+  .flashcard-stack:hover .flashcard-back {
+    transform: rotate(11deg) translate(168px, 20px);
+  }
+
+  .flashcard-stack:hover .flashcard-front {
+    transform: rotate(-8deg) translateY(-8px);
+  }
+}
+
+.flashcard-stack.is-open .flashcard-back {
   transform: rotate(11deg) translate(168px, 20px);
 }
 
-.flashcard-stack:hover .flashcard-front {
+.flashcard-stack.is-open .flashcard-front {
   transform: rotate(-8deg) translateY(-8px);
 }
 
@@ -412,6 +425,17 @@ img {
 .product-card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-lift);
+}
+
+/* Auto margins center the cards when they don't fill the row (e.g. a single
+   pack) while still letting an overflowing row scroll from its first card,
+   which justify-content: center would clip. */
+.product-card:first-child {
+  margin-left: auto;
+}
+
+.product-card:last-child {
+  margin-right: auto;
 }
 
 .product-card.is-best-value {
