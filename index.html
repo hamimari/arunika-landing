@@ -10,7 +10,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16.png" />
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png" />
+  <link rel="manifest" href="site.webmanifest" />
+  <meta name="theme-color" content="#C2541F" />
+  <link rel="stylesheet" href="styles.css?v=20261126" />
 </head>
 <body>
 
@@ -34,7 +40,7 @@
           </p>
           <div class="hero-actions">
             <a href="#cta" class="btn btn-primary btn-lg">Mulai Sekarang</a>
-            <a href="#products" class="btn btn-ghost btn-lg">Lihat Paket</a>
+            <a href="#catalog" class="btn btn-ghost btn-lg">Lihat Koleksi</a>
           </div>
         </div>
 
@@ -73,39 +79,39 @@
       </div>
     </section>
 
-    <!-- FEATURES -->
-    <section class="section">
-      <div class="container">
-        <div class="features">
-          <div class="feature-card">
-            <div class="feature-icon">✨</div>
-            <h3>Digital Flashcard AR</h3>
-            <p>Lihat objek 3D muncul dengan animasi.</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">🌙</div>
-            <h3>Dongeng</h3>
-            <p>Audio dongeng untuk menemani anak dan meningkatkan imajinasi.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- MEMBERSHIP & BUNDLES (live product showcase) -->
-    <section class="section" id="products">
+    <!-- CATALOG: every AR card and fairy tale, live from the API -->
+    <section class="section" id="catalog">
       <div class="container">
         <div class="section-heading">
-          <h2>Pilihan <span class="accent">Paket</span></h2>
-          <p class="lede">Membership dan bundling yang tersedia di aplikasi Arunika saat ini.</p>
+          <h2>Koleksi <span class="accent">Arunika</span></h2>
+          <p class="lede">Semua Flashcard AR dan dongeng yang bisa kamu miliki di aplikasi Arunika.</p>
         </div>
 
-        <div id="product-carousel" class="product-carousel" hidden>
-          <div id="product-grid" class="product-grid"></div>
+        <div class="catalog-cluster" id="catalog-ar" hidden>
+          <div class="catalog-cluster-head">
+            <h3>✨ Flashcard AR</h3>
+            <span class="catalog-count"></span>
+          </div>
+          <div class="product-carousel">
+            <div class="product-grid"></div>
+          </div>
+          <div class="product-dots" hidden></div>
         </div>
-        <div id="product-dots" class="product-dots" hidden></div>
-        <div id="product-loading" class="product-status">Memuat paket…</div>
-        <div id="product-fallback" class="product-status" hidden>
-          Paket tersedia di aplikasi — buka aplikasi untuk melihat pilihan lengkap.
+
+        <div class="catalog-cluster" id="catalog-dongeng" hidden>
+          <div class="catalog-cluster-head">
+            <h3>🌙 Dongeng</h3>
+            <span class="catalog-count"></span>
+          </div>
+          <div class="product-carousel">
+            <div class="product-grid"></div>
+          </div>
+          <div class="product-dots" hidden></div>
+        </div>
+
+        <div id="catalog-loading" class="product-status">Memuat koleksi…</div>
+        <div id="catalog-fallback" class="product-status" hidden>
+          Koleksi tersedia di aplikasi — buka aplikasi untuk melihat semua kartu dan dongeng.
         </div>
       </div>
     </section>
@@ -137,6 +143,6 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=20261126"></script>
 </body>
 </html>

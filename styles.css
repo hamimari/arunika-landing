@@ -438,10 +438,6 @@ img {
   margin-right: auto;
 }
 
-.product-card.is-best-value {
-  border-color: var(--orange);
-}
-
 .product-media {
   position: relative;
   aspect-ratio: 16 / 10;
@@ -494,20 +490,11 @@ img {
   color: var(--orange-dark);
 }
 
-.product-badge.subscription {
-  background: #EDE9FE;
-  color: #6D28D9;
-}
-
+/* flex: 1 pushes price and button to the bottom, so a row of cards with
+   one- and two-line titles keeps its buttons aligned. */
 .product-body h3 {
   margin: 0;
   font-size: 19px;
-}
-
-.product-description {
-  color: var(--text-muted);
-  font-size: 14px;
-  margin: 0;
   flex: 1;
 }
 
@@ -516,14 +503,6 @@ img {
   font-weight: 700;
   color: var(--orange);
   margin: 4px 0 0;
-}
-
-.product-availability {
-  font-size: 13px;
-  color: var(--text-muted);
-  border-top: 1px solid var(--border-soft);
-  padding-top: 12px;
-  margin-top: 4px;
 }
 
 .product-status {
@@ -556,6 +535,60 @@ img {
   gap: 16px;
   flex-wrap: wrap;
   margin-bottom: 28px;
+}
+
+/* ---------- Catalog (AR cards + fairy tales) ---------- */
+.catalog-cluster {
+  margin-bottom: 56px;
+  display: flex;
+  flex-direction: column;
+}
+
+.catalog-cluster:last-of-type {
+  margin-bottom: 0;
+}
+
+.catalog-cluster-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.catalog-cluster-head h3 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.catalog-count {
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+/* Catalog items reuse the .product-card styles below. */
+.product-price.is-free {
+  color: var(--green);
+}
+
+.product-strike {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-muted);
+  margin-right: 8px;
+}
+
+.product-badge.dongeng {
+  background: #E0F2FE;
+  color: #0369A1;
+}
+
+.product-buy {
+  width: 100%;
+  margin-top: 8px;
 }
 
 /* ---------- Footer ---------- */
@@ -715,6 +748,7 @@ img {
     flex-basis: calc((100% - 24px) / 2);
   }
 }
+
 
 @media (max-width: 480px) {
   .hero h1 {
