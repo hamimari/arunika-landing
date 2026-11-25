@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=20261126" />
 </head>
 <body>
 
@@ -104,8 +104,10 @@
             <h3>✨ Flashcard AR</h3>
             <span class="catalog-count"></span>
           </div>
-          <div class="catalog-grid"></div>
-          <button type="button" class="btn btn-ghost catalog-more" hidden></button>
+          <div class="product-carousel">
+            <div class="product-grid"></div>
+          </div>
+          <div class="product-dots" hidden></div>
         </div>
 
         <div class="catalog-cluster" id="catalog-dongeng" hidden>
@@ -113,32 +115,15 @@
             <h3>🌙 Dongeng</h3>
             <span class="catalog-count"></span>
           </div>
-          <div class="catalog-grid"></div>
-          <button type="button" class="btn btn-ghost catalog-more" hidden></button>
+          <div class="product-carousel">
+            <div class="product-grid"></div>
+          </div>
+          <div class="product-dots" hidden></div>
         </div>
 
         <div id="catalog-loading" class="product-status">Memuat koleksi…</div>
         <div id="catalog-fallback" class="product-status" hidden>
           Koleksi tersedia di aplikasi — buka aplikasi untuk melihat semua kartu dan dongeng.
-        </div>
-      </div>
-    </section>
-
-    <!-- MEMBERSHIP & BUNDLES (live product showcase) -->
-    <section class="section" id="products">
-      <div class="container">
-        <div class="section-heading">
-          <h2>Pilihan <span class="accent">Paket</span></h2>
-          <p class="lede">Membership dan bundling yang tersedia di aplikasi Arunika saat ini.</p>
-        </div>
-
-        <div id="product-carousel" class="product-carousel" hidden>
-          <div id="product-grid" class="product-grid"></div>
-        </div>
-        <div id="product-dots" class="product-dots" hidden></div>
-        <div id="product-loading" class="product-status">Memuat paket…</div>
-        <div id="product-fallback" class="product-status" hidden>
-          Paket tersedia di aplikasi — buka aplikasi untuk melihat pilihan lengkap.
         </div>
       </div>
     </section>
@@ -170,6 +155,6 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=20261126"></script>
 </body>
 </html>
